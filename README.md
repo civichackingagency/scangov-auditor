@@ -49,7 +49,8 @@ QueryInput = {
   ExpressionAttributeValues: {
     ":status": "STATUS#ONLINE"
   }
-}```
+}
+```
 
 - Get information for a single domain:
 
@@ -59,7 +60,8 @@ GetItemInput = {
     PK: "DOMAIN#example.com",
     SK: "METADATA#latest"
   }
-}```
+}
+```
 
 - Get 5 records with old check date and specific status:
 
@@ -72,11 +74,14 @@ QueryInput = {
     ":status": "STATUS#ONLINE",
     ":date": "2025-01-25"
   }
-}```
+}
+```
 
 ## Where is data stored
 
 This Lambda function reviews the sites in the database on a schedule and writes the audit results to a publicly accessible S3 bucket: ```audits.scangov.org```
+
+Example: <a href="https://s3.us-east-1.amazonaws.com/audits.scangov.org/performance/copyright.gov.json">https://s3.us-east-1.amazonaws.com/audits.scangov.org/performance/copyright.gov.json</a>
 
 ## Running locally
 
